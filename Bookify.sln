@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.Domain", "Bookify.Domain\Bookify.Domain.csproj", "{BE12B561-1758-4DD1-B542-CDB4D9777A10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookify.Domain", "Bookify.Domain\Bookify.Domain.csproj", "{BE12B561-1758-4DD1-B542-CDB4D9777A10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D1C604C0-32B8-4A33-9E3A-290B7F756926}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D893667D-B51E-416C-BA5A-51B041221EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookfy.Application", "Bookfy.Application\Bookfy.Application.csproj", "{E0BD6E9A-68A7-459D-A823-0612C9F33510}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,17 @@ Global
 		{BE12B561-1758-4DD1-B542-CDB4D9777A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE12B561-1758-4DD1-B542-CDB4D9777A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE12B561-1758-4DD1-B542-CDB4D9777A10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0BD6E9A-68A7-459D-A823-0612C9F33510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0BD6E9A-68A7-459D-A823-0612C9F33510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0BD6E9A-68A7-459D-A823-0612C9F33510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0BD6E9A-68A7-459D-A823-0612C9F33510}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE12B561-1758-4DD1-B542-CDB4D9777A10} = {D1C604C0-32B8-4A33-9E3A-290B7F756926}
+		{E0BD6E9A-68A7-459D-A823-0612C9F33510} = {D1C604C0-32B8-4A33-9E3A-290B7F756926}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01EC6487-C6CA-42A4-AD16-F429A24252B5}
