@@ -12,6 +12,7 @@ namespace Bookify.Infrastructure.Configurations
             builder.ToTable("apartments");
 
             builder.HasKey(apartment => apartment.Id);
+
             builder.OwnsOne(apartment => apartment.Address);
 
             builder.Property(apartment => apartment.Name)
@@ -19,7 +20,7 @@ namespace Bookify.Infrastructure.Configurations
                 .HasConversion(name => name.Value, value => new Name(value));
 
             builder.Property(apartment => apartment.Description)
-                .HasMaxLength(4000)
+                .HasMaxLength(2000)
                 .HasConversion(description => description.Value, value => new Description(value));
 
             builder.OwnsOne(apartment => apartment.Price, priceBuilder =>

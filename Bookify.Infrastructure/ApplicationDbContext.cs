@@ -1,5 +1,9 @@
 ﻿using Bookify.Application.Exceptions;
 using Bookify.Domain.Abstractions;
+using Bookify.Domain.Entities.Apartments;
+using Bookify.Domain.Entities.Bookings;
+using Bookify.Domain.Entities.Shared;
+using Bookify.Domain.Entities.Users;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +22,45 @@ namespace Bookify.Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+            // * bookings * //
+            modelBuilder.Entity<Booking>().ToTable("bookings");
+
+            modelBuilder.Entity<Booking>().HasKey(booking => booking.Id);
+
+            modelBuilder.Entity<Booking>().OwnsOne(booking => booking.Price, priceBuilder =>
+            {
+                priceBuilder.Property(money => money.Currency)
+                    .HasConversion(currency => currency.Code, code => Currency.FromCode(code));
+            });
+
+            modelBuilder.Entity<Booking>().OwnsOne(booking => booking.CleaningFee, priceBuilder =>
+            {
+                priceBuilder.Property(money => money.Currency)
+                    .HasConversion(currency => currency.Code, code => Currency.FromCode(code));
+            });
+
+            modelBuilder.Entity<Booking>().OwnsOne(booking => booking.AmenitiesUpCharge, priceBuilder =>
+            {
+                priceBuilder.Property(money => money.Currency)
+                    .HasConversion(currency => currency.Code, code => Currency.FromCode(code));
+            });
+
+            modelBuilder.Entity<Booking>().OwnsOne(booking => booking.Total, priceBuilder =>
+            {
+                priceBuilder.Property(money => money.Currency)
+                    .HasConversion(currency => currency.Code, code => Currency.FromCode(code));
+            });
+
+            modelBuilder.Entity<Booking>().OwnsOne(booking => booking.Duration);
+
+            modelBuilder.Entity<Booking>().HasOne<Apartment>()
+                .WithMany()
+                .HasForeignKey(booking => booking.ApartmentId);
+
+            modelBuilder.Entity<Booking>().HasOne<User>()
+                .WithMany()
+                .HasForeignKey(booking => booking.UserId);
+
             base.OnModelCreating(modelBuilder);
         }
 

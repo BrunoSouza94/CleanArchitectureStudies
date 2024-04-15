@@ -9,6 +9,10 @@
             Id = id;
         }
 
+        protected Entity()
+        {
+        }
+
         public Guid Id { get; init; }
 
         public void ClearDomainEvents() => _domainEvents.Clear();
