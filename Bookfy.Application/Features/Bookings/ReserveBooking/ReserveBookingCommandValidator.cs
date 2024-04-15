@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Bookfy.Application.Features.Bookings.ReserveBooking
+namespace Bookify.Application.Features.Bookings.ReserveBooking
 {
     public class ReserveBookingCommandValidator
         : AbstractValidator<ReserveBookingCommand>

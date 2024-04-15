@@ -1,4 +1,4 @@
-﻿namespace Bookfy.Application.Exceptions
+﻿namespace Bookify.Application.Exceptions
 {
     public sealed class ConcurrencyException : Exception
     {

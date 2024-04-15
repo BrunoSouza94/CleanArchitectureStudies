@@ -1,4 +1,4 @@
-﻿namespace Bookfy.Application.Features.Apartments.SearchApartments
+﻿namespace Bookify.Application.Features.Apartments.SearchApartments
 {
     public sealed class AddressResponse
     {

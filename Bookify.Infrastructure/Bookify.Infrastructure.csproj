@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bookfy.Application\Bookfy.Application.csproj" />
+    <ProjectReference Include="..\Bookify.Application\Bookify.Application.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-﻿using Bookfy.Application.Abstractions.Messaging;
+﻿using Bookify.Application.Abstractions.Messaging;
 
-namespace Bookfy.Application.Features.Apartments.SearchApartments
+namespace Bookify.Application.Features.Apartments.SearchApartments
 {
     public sealed record SearchApartmentsQuery(DateOnly StartDate, DateOnly EndDate)
         : IQuery<IReadOnlyList<ApartmentResponse>>;

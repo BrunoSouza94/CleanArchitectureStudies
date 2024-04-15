@@ -1,4 +1,4 @@
-﻿using Bookfy.Application.Exceptions;
+﻿using Bookify.Application.Exceptions;
 using Bookify.Domain.Abstractions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;

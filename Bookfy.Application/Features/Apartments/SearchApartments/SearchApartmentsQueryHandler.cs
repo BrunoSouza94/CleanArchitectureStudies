@@ -1,10 +1,10 @@
-﻿using Bookfy.Application.Abstractions.Data;
-using Bookfy.Application.Abstractions.Messaging;
+﻿using Bookify.Application.Abstractions.Data;
+using Bookify.Application.Abstractions.Messaging;
 using Bookify.Domain.Abstractions;
 using Bookify.Domain.Entities.Bookings;
 using Dapper;
 
-namespace Bookfy.Application.Features.Apartments.SearchApartments
+namespace Bookify.Application.Features.Apartments.SearchApartments
 {
     internal sealed class SearchApartmentsQueryHandler 
         : IQueryHandler<SearchApartmentsQuery, IReadOnlyList<ApartmentResponse>>

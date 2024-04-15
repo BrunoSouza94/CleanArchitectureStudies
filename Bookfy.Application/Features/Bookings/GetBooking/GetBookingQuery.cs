@@ -1,6 +1,6 @@
-﻿using Bookfy.Application.Abstractions.Messaging;
+﻿using Bookify.Application.Abstractions.Messaging;
 
-namespace Bookfy.Application.Features.Bookings.GetBooking
+namespace Bookify.Application.Features.Bookings.GetBooking
 {
     public sealed record GetBookingQuery(Guid BookingId) : IQuery<BookingResponse>;
 }

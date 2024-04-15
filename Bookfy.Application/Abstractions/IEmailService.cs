@@ -1,6 +1,6 @@
 ﻿using Bookify.Domain.Entities.Users;
 
-namespace Bookfy.Application.Abstractions
+namespace Bookify.Application.Abstractions
 {
     public interface IEmailService
     {

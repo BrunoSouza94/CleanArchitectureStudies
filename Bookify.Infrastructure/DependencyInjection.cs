@@ -1,6 +1,6 @@
-﻿using Bookfy.Application.Abstractions;
-using Bookfy.Application.Abstractions.Clock;
-using Bookfy.Application.Abstractions.Data;
+﻿using Bookify.Application.Abstractions;
+using Bookify.Application.Abstractions.Clock;
+using Bookify.Application.Abstractions.Data;
 using Bookify.Domain.Abstractions;
 using Bookify.Domain.Entities.Apartments;
 using Bookify.Domain.Entities.Bookings;

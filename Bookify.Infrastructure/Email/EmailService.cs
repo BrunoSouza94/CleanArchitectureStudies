@@ -1,4 +1,4 @@
-﻿using Bookfy.Application.Abstractions;
+﻿using Bookify.Application.Abstractions;
 using Bookify.Domain.Entities.Users;
 
 namespace Bookify.Infrastructure.NovaPasta

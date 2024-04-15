@@ -1,13 +1,13 @@
-﻿using Bookfy.Application.Abstractions.Clock;
-using Bookfy.Application.Abstractions.Messaging;
-using Bookfy.Application.Exceptions;
+﻿using Bookify.Application.Abstractions.Clock;
+using Bookify.Application.Abstractions.Messaging;
+using Bookify.Application.Exceptions;
 using Bookify.Domain.Abstractions;
 using Bookify.Domain.Apartments;
 using Bookify.Domain.Entities.Apartments;
 using Bookify.Domain.Entities.Bookings;
 using Bookify.Domain.Entities.Users;
 
-namespace Bookfy.Application.Features.Bookings.ReserveBooking
+namespace Bookify.Application.Features.Bookings.ReserveBooking
 {
     internal sealed class ReserveBookingCommandHandler : ICommandHandler<ReserveBookingCommand, Guid>
     {
