@@ -1,5 +1,4 @@
 ﻿using Bookify.Domain.Entities.Users;
-using Bookify.Domain.Entities.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -26,6 +25,8 @@ namespace Bookify.Infrastructure.Configurations
                 .HasConversion(email => email.Value, value => new Domain.Entities.Users.Email(value));
 
             builder.HasIndex(user => user.Email).IsUnique();
+
+            builder.HasIndex(user => user.IdentityId).IsUnique();
         }
     }
 }
